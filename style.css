@@ -69,6 +69,25 @@ body{
     margin-top: 30px;
 }
 
+.temperature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-box{
+    border: none;
+    outline: none;
+    text-align: center;
+    background: #ebfffc;
+    color: #555;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
 .cast h1{
     font-size: 80px;
     font-weight: 500;
@@ -77,7 +96,7 @@ body{
 .cast h2{
     font-size: 45px;
     font-weight: 400;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .more-elements{
