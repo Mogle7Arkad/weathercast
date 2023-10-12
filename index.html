@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="search-container">
-        <div class="search">
+        <div class="search" id="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
             <button><img src="images/search.png" alt="search-icon"></button>
         </div>
@@ -17,27 +17,27 @@
     <div class="cast">
         <img src="images/rain.png" alt="rain gif" class="cast-icon">
         <div class="temperature">
-            <h1 class="temp">22 °c</h1>
+            <h1 class="temp" id="temp">22 °c</h1>
             <select name="temp-toggle" id="selectBox" class="select-box">
                 <option value="celsius" class="option" selected>°C</option>
                 <option value="kelvin" class="option">K</option>
                 <option value="farenheit" class="option">°F</option>
             </select>
         </div>
-        <h2 class="city">Lagos</h2>
+        <h2 class="city" id="city">Lagos</h2>
         <div class="more-elements">
             <div class="col">
                 <img src="images/humidity.png">
                 <div>
                     <p class="humidity">50%</p>
-                    <p>Humidity</p>
+                    <p id="humidity">Humidity</p>
                 </div>
             </div>
             <div class="col">
                 <img src="images/wind.png">
                 <div>
                     <p class="wind">15km/h</p>
-                    <p>Wind Speed</p>
+                    <p id="windSpeed">Wind Speed</p>
                 </div>
             </div>
         </div>
