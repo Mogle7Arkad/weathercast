@@ -8,15 +8,26 @@ body{
     background: #222;
 }
 
+.head{
+    color: #fff;
+    background: linear-gradient(135deg, #5b548a, #00feba);
+    font-size: 50px;
+}
+.container{
+    display: flex;
+}
+
 .search-container{
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: linear-gradient(135deg, #00feba, #5b548a, #00feba);
     color: #fff;
-    margin: 100px auto 0;
+    margin:50px auto 0;
+    margin-top: 30px;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    height: 150px;
 }
 
 .search{
@@ -66,7 +77,7 @@ body{
     max-width: 470px;
     background: linear-gradient(235deg, #00feba, #5b548a);
     color: #fff;
-    margin: 50px auto 0;
+    margin: 30px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
