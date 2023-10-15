@@ -12,7 +12,8 @@ const error = document.querySelector('#error');
 const apiKey = '647a6068d1d73ad2a9ee14c8ceb0b28c';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
-async function checkWeather(city) {
+export async function checkWeather(city) {    
+
     try {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
@@ -62,7 +63,9 @@ function changeWeatherIcon(data) {
     }
 }
 
-searchBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    checkWeather(searchInput.value);
-})
+export function search(){
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        checkWeather(searchInput.value);
+    })
+}

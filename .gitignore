@@ -1,2 +1,6 @@
-/images
-/screenshots
+images
+screenshots
+node_modules
+package-lock.json
+.env
+env.js
