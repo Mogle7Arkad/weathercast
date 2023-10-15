@@ -22,7 +22,7 @@ export async function checkWeather(city) {
         } else{
                     
             let data = await response.json();
-            
+
             changeWeatherIcon(data);
 
             temperature.innerHTML = Math.round(data.main.temp) + ' °C';
