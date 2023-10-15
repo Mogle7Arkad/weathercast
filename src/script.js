@@ -9,7 +9,7 @@ const windSpeed = document.querySelector('#windSpeed');
 const castIcon = document.querySelector('#castIcon');
 const error = document.querySelector('#error');
 
-const apiKey = '647a6068d1d73ad2a9ee14c8ceb0b28c';
+const apiKey = config.API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
 export async function checkWeather(city) {    
