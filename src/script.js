@@ -24,6 +24,7 @@ export async function checkWeather(city) {
 
             changeWeatherIcon(data);
 
+            temperature.innerHTML = Math.round(data.main.temp) + ' °C';
             selectOpts(data)
             searchCity.innerHTML = data.name;
             humidity.innerHTML = data.main.humidity + ' %';
