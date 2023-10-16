@@ -13,14 +13,11 @@ const apiKey = config.API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
 export async function checkWeather(city) {    
-
     try {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
-        if(response.status == 404 || response.status == 400) {
+        if (response.status == 404 || response.status == 400) {
             error.style.display = 'block';
-        } else{
-                    
+        } else {          
             let data = await response.json();
 
             changeWeatherIcon(data);
@@ -38,32 +35,31 @@ export async function checkWeather(city) {
     }
 }
 
-function changeWeatherIcon(data) {
-    switch (data.weather[0].main) {
+function getWeatherIconPath(weather) {
+    switch (weather) {
         case 'Clouds':
-            castIcon.src = 'images/clouds.png';
-            break;
+            return 'images/clouds.png';
         case 'Rain':
-            castIcon.src = 'images/rain.png';
-            break;
+            return 'images/rain.png';
         case 'Clear':
-            castIcon.src = 'images/clear.png';
-            break;
+            return 'images/clear.png';
         case 'Drizzle':
-            castIcon.src = 'images/drizzle.png';
-            break;
+            return 'images/drizzle.png';
         case 'Mist':
-            castIcon.src = 'images/mist.png';
-            break;
+            return 'images/mist.png';
         case 'Snow':
-            castIcon.src = 'images/snow.png';
-            break;
-        
+            return 'images/snow.png';
         default:
+            return 'images/clear.png'; 
     }
 }
 
-export function search(){
+function changeWeatherIcon(data) {
+    const weatheIconPath = getWeatherIconPath(data.weather[0].main);
+    castIcon.src = weatheIconPath;
+}
+
+export function search() {
     searchBtn.addEventListener('click', (e) => {
         e.preventDefault();
         checkWeather(searchInput.value);
