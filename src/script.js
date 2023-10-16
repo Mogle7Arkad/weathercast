@@ -9,6 +9,8 @@ const windSpeed = document.querySelector('#windSpeed');
 const castIcon = document.querySelector('#castIcon');
 const error = document.querySelector('#error');
 
+const selectBox = document.querySelector('#selectBox');
+
 const apiKey = config.API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
@@ -22,7 +24,7 @@ export async function checkWeather(city) {
 
             changeWeatherIcon(data);
 
-            temperature.innerHTML = Math.round(data.main.temp) + ' °C';
+            selectOpts(data)
             searchCity.innerHTML = data.name;
             humidity.innerHTML = data.main.humidity + ' %';
             windSpeed.innerHTML = data.wind.speed + ' km/h';
@@ -33,6 +35,31 @@ export async function checkWeather(city) {
     } catch (error) {
         console.log(error)
     }
+}
+
+function getTemptValue(tempt, selectValue){
+    const celsius =  tempt + ' °C';
+    const kelvin = Math.round(tempt + 273.15) + ' K';
+    const farenheit = Math.round((tempt * 1.8) + 32) + ' °f';
+
+    switch (selectValue) {
+        case '°C':
+            return celsius;
+        case 'K':
+            return kelvin;
+        case '°F':
+            return farenheit;
+        default:
+            return kelvin;
+    }
+}
+
+function toggleTempt(data) {
+    const tempt = Math.round(data.main.temp);
+    const selectValue = selectBox.value;
+
+    const temptValue = getTemptValue(tempt, selectValue);
+    temperature.innerHTML = temptValue;
 }
 
 function getWeatherIconPath(weather) {
@@ -57,6 +84,12 @@ function getWeatherIconPath(weather) {
 function changeWeatherIcon(data) {
     const weatheIconPath = getWeatherIconPath(data.weather[0].main);
     castIcon.src = weatheIconPath;
+}
+
+function selectOpts(data){
+    selectBox.addEventListener('change', () => {
+        toggleTempt(data);
+    })
 }
 
 export function search() {
