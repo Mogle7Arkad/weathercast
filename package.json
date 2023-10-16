@@ -1,0 +1,19 @@
+{
+  "name": "weathercast",
+  "version": "1.0.0",
+  "description": "This is a simple weather app that enables you get the average weather condition of a city by simply searching the city's name. This app is program to display the average weather data of the basic weather elements vis: temperature(in celsius and fareinheit), humidity and windsspeed(in km/h).\r Progressing, more features may be consider like ability to forecast weather for days, add more weather elements among other things to meet users need/demand.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "cli": "^1.0.1",
+    "webpack": "^5.89.0"
+  }
+}
