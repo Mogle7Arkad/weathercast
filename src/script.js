@@ -15,7 +15,7 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q='
 
 const celsiusUnit = '°C';
 const kelvinUnit = 'K';
-const FahrenheitUnit = '°F';
+const fahrenheitUnit = '°F';
 
 export async function checkWeather(city) {    
     try {
@@ -46,8 +46,8 @@ function getTemptValue(tempt, selectValue){
     switch (selectValue) {
         case celsiusUnit: 
             return tempt + ' ' + celsiusUnit;
-        case FahrenheitUnit:
-            return Math.round((tempt * 1.8) + 32) + ' ' + FahrenheitUnit;
+        case fahrenheitUnit:
+            return Math.round((tempt * 1.8) + 32) + ' ' + fahrenheitUnit;
         default:
             return Math.round(tempt + 273.15) + ' ' + kelvinUnit;
     }
