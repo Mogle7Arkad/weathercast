@@ -1,5 +1,5 @@
 # weathercast
-This is a simple weather app that enables you get the average weather condition of a city by simply searching the city's name. This app is program to display the average weather data of the basic weather elements vis: temperature(in celsius, kelvin and fareinheit), humidity(in percent-%) and windsspeed(in km/h).
+This is a simple weather app that enables you get the average weather condition of a city by simply searching the city's name. This app is program to display the average weather data of the basic weather elements vis: temperature(in celsius, kelvin and fahrenheit), humidity(in percent-%) and windsspeed(in km/h).
 Progressing, more features may be consider like ability to forecast weather for days, add more weather elements among other things to meet users need/demand.
 
 ## Features
