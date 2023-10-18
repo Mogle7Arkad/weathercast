@@ -1,2 +1,2 @@
-import { search } from "./script";
-search();
+import { setSearchBtnListener} from "./script";
+setSearchBtnListener();
