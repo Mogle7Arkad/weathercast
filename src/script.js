@@ -35,7 +35,7 @@ export async function checkWeather(city) {
             error.style.display = 'none';
             cast.style.display = 'block';
 
-            setSelectBOxLIstener(data)
+            setSelectBoxListener(data)
         }
     } catch (error) {
         console.log(error)
@@ -85,7 +85,7 @@ function changeWeatherIcon(data) {
     castIcon.src = weatheIconPath;
 }
 
-function setSelectBOxLIstener(data){
+function setSelectBoxListener(data){
     selectBox.addEventListener('change', () => {
         toggleTempt(data);
     })
