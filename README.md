@@ -26,7 +26,7 @@ The below image shows the app in its active state displaying the various weather
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/tennjugu/Weather_App.git
+   git clone https://github.com/Mogle7Arkad/weathercast
    ```
 
 2. Open the project folder in your favorite code editor.
