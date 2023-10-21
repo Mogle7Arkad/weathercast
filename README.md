@@ -16,17 +16,19 @@ The below image shows the app in its active state displaying error message indic
 ![](./dist/screenshots/active_error.png)
 
 ### active state
-The below image shows the app in its active state displaying the various weather informations as requested.
+The below image shows the app in its active state displaying the various weather informations as requested. the first image showing reading in degree celsius, the second in kelvin and the third in degree fahrenheit.
 ![](./dist/screenshots/active.png)
 
-1[](./dist/screenshots/active_ktempt.png)
+![](./dist/screenshots/active_ktempt.png)
+
+![](./dist/screenshots/fahReading.png)
 
 ## Getting Started
 
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/tennjugu/Weather_App.git
+   git clone https://github.com/Mogle7Arkad/weathercast
    ```
 
 2. Open the project folder in your favorite code editor.
@@ -41,7 +43,7 @@ The below image shows the app in its active state displaying the various weather
 
 2. On filling the form click the search button and your results will be fetched and displayed on the screen.
 
-3. When a non existence city name is inputted or the submit search is clicked while the input field is empty, a query is displayed to alert you to input the a valid city name.
+3. When a non existing city name is inputted or the search button is clicked while the input field is empty, a query is displayed to alert you to input the a valid city name.
 
 ## API Key Disclaimer
 
